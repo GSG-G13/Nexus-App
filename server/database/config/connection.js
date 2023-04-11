@@ -10,6 +10,8 @@ if (NODE_ENV === 'production') {
     dbUrl = DEV_DB_URL;
 }
 
+
+
 const options = {
     connectionString: dbUrl,
     ssl: NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
