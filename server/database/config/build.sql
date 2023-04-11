@@ -34,3 +34,4 @@ INSERT INTO posts(post_iamge, caption, user_id) VALUES
 COMMIT;
 
 -- C:/Users/Amal/Desktop/G13/month2/week6/Nexus-App/server/database/config/build.sql
+-- postgres://nex:123456@localhost:5432/nexuus2
