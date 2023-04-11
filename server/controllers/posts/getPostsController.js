@@ -11,7 +11,7 @@ const getPostsController = (req, res) => {
         }))
         .catch((err) => res.status(500).json({
             error: true,
-            message:err.message
+            message:'server Error'
     }))
 }
 
