@@ -2,10 +2,6 @@ const router = require('express').Router();
 const path = require('path');
 const getPostsController = require('../controllers')
 
-router.get('/', (req, res) => {
-  res.send('hello World')
-});
-
 router.get('/signup', (req, res)=>{
  res.status(200).sendFile(path.join(__dirname,'..','..', 'public','control','signup.html' ));
 })
