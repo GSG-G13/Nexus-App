@@ -1,5 +1,5 @@
-const connection = require("../../config/connection")
-
+const connection = require("../../config/connection");
+const addUser = require('../database/query/users/adduser');
 
 const addUser = (userData)=> {
 const {email, username, password} = userData;
