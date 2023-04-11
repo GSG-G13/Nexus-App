@@ -6,13 +6,12 @@ const addPostController = (req, res) => {
   addPostQuery({ imageURL, captionInput, userId })
     .then(data => res.status(201).json({
       error: false,
-      post: data
+      post: data.rows[0]
     }))
-    .catch(err => res.status(500).json({
+    .catch(() => res.status(500).json({
       error: true,
       message: 'SERVER ERROR'
     }));
-  console.log(imageURL, captionInput);
 }
 
 module.exports = addPostController;

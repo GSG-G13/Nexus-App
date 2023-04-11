@@ -1,3 +1,3 @@
-const { addPostController } = require('./posts')
+const { addPostController, getPostsController } = require('./posts')
 
-module.exports = { addPostController };
+module.exports = { addPostController, getPostsController };

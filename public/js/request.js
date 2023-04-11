@@ -20,17 +20,17 @@ overlay.addEventListener('click', () => {
 })
 
 shareBtn.addEventListener('click', () => {
-  fetch('/post', {
+  fetch('/posts', {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
-    body: {
+    body: JSON.stringify({
       imageURL: imageInput.value,
       captionInput: captionInput.value,
       userId: 1
-    }
+    })
   })
-    .then(res => res.json())
-    .then(data => console.log(data));
+    // .then(res => res.json())
+    .then(data => console.log(data.post));
 
   createPostSection.classList.remove('active')
   overlay.classList.remove('active')

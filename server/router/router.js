@@ -1,11 +1,8 @@
 const router = require('express').Router();
+const{ getPostsController, addPostController} = require('../controllers')
 
-const { addPostController } = require('../controllers')
+router.get('/posts', getPostsController)
 
-router.get('/', (req, res) => {
-  res.send('hello World')
-})
-
-router.post('/post', addPostController)
+router.post('/posts', addPostController)
 
 module.exports = router;
