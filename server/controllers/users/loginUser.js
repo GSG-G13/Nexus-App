@@ -34,7 +34,7 @@ const loginController = (req, res) => {
               },
               "potato"
             );
-            res.cookie("access_token", access_token).redirect('/');
+            res.cookie("access_token", access_token).json({ data: data.rows, msg: 'Logged in successfully' });
           }else{
             res.status(401).json({message:"password is wrong"})
           }
