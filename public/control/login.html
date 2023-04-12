@@ -11,25 +11,24 @@
     <div class="container">
       <div class="right">
         <h1>Log in to Nexuus</h1>
-        <div id="form">
+        <form id="login-form">
           <input
             type="text"
             name="email"
             class="input-field"
-            id="email"
+            id="login-email"
             placeholder="Username or email"
           />
           <p class="error_meesage error_meesage_hidden" id="email_error"></p>
-          <input type="password" name="password" class="input-field" id="password" placeholder="Password" />
+          <input type="password" name="password" class="input-field" id="login-password" placeholder="Password" />
           <p class="error_meesage error_meesage_hidden" id="password_error"></p>
-          <button class="btn" id="log-btn">Log In</button>
-        </div>
+          <button type="submit" class="btn" id="log-btn">Log In</button>
+        </form>
         <div class="signup-link">
           Don't have an account? <a href="/signup">Sign up</a>
         </div>
       </div>
     </div>
-    <script src="https://unpkg.com/joi@17.6.0/dist/joi-browser.min.js"></script>
-    <script src="../js/valid.js"></script>
+    <script src="../js/request.js"></script>
   </body>
 </html>
