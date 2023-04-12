@@ -17,10 +17,15 @@
               </div>
             </div>
             <div class="container">
-              <form action="add-user" method="post">
-                <input type="text" placeholder="Mobile Number or Email" name="email">
-                <input type="text" placeholder="Username" name="username">
-                <input type="password" placeholder="Password" name="password">
+              <form id="signup-form" action="/add-user" method="post">
+                <input type="text"  id="email" placeholder="Mobile Number or Email" name="email" required>
+                <p class="error_meesage error_meesage_hidden" id="email_error"></p>
+                <input type="text" id="username" placeholder="Username" name="username" required>
+                <p class="error_meesage error_meesage_hidden" id="username_error"></p>
+
+                <input type="password"  id="password" placeholder="Password" name="password" required>
+                <p class="error_meesage error_meesage_hidden" id="password_error"></p>
+
                 <button>Sign up</button>
               </form>
                 <p>By signing up, you agree to our Terms , Privacy Policy and Cookies Policy .</p>
@@ -31,6 +36,7 @@
         </div>
       </main>
       
-    
+      <script src="https://unpkg.com/joi@17.6.0/dist/joi-browser.min.js"></script>
+    <script src="../js/validation.js"></script>
 </body>
 </html>
