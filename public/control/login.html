@@ -11,13 +11,14 @@
     <div class="container">
       <div class="right">
         <h1>Log in to Nexuus</h1>
-        <form>
+        <form action="/login" method="post">
           <input
             type="text"
+            name="email"
             class="input-field"
             placeholder="Username or email"
           />
-          <input type="password" class="input-field" placeholder="Password" />
+          <input type="password" name="password" class="input-field" placeholder="Password" />
           <button type="submit" class="btn">Log In</button>
         </form>
         <div class="signup-link">
