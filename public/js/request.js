@@ -1,3 +1,4 @@
+
 const createBtn = document.querySelector('.create-btn');
 const createPostSection = document.querySelector('.create-post-section');
 const overlay = document.querySelector('.overlay');
@@ -29,7 +30,7 @@ shareBtn.addEventListener('click', () => {
       userId: 1
     })
   })
-    // .then(res => res.json())
+    .then(res => res.json())
     .then(data => console.log(data.post));
 
   createPostSection.classList.remove('active')
@@ -38,3 +39,8 @@ shareBtn.addEventListener('click', () => {
   imageInput.value = ''
   captionInput.value = ''
 })
+
+fetch("/posts")
+  .then((res) => res.json())
+  .then((data) => renderPosts(data.data.posts))
+  .catch((err) => console.log(err))
