@@ -15,5 +15,6 @@ router.get('/posts', getPostsController)
 
 router.post('/posts', addPostController)
 
-
+router.use(clientError);
+router.use(serverError);
 module.exports = router;
