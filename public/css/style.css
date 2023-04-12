@@ -19,6 +19,7 @@ body{
   flex-direction: column;
   align-items: center;
   width: 25vw;
+  max-width: 250px;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -29,7 +30,7 @@ body{
 .sidebar .logo{
   text-decoration: none;
   color: #000;
-  font-size: 2rem;
+  font-size: 4rem;
   font-family: 'Dancing Script', cursive;
   font-weight: bold;
   margin-bottom: 5rem;
@@ -69,3 +70,102 @@ body{
   height: 25px !important;
   border-radius: 50%;
 }
+
+/* Start Form Section */
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9998;
+  display: none;
+}
+
+.create-post-section{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: #eee;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 500px;
+  display: none;
+}
+
+.create-post-section.active,
+.overlay.active{
+  display: block;
+}
+h1 {
+   text-align: center;
+   color: #a8a8a8;
+   text-shadow :1px 1px 0 rgba(white, 1);
+}
+
+.dataForm {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+}
+.dataForm input, textarea {
+  border:0;
+   outline:0;
+  padding: 1em;
+  border-radius :8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  box-shadow :0 1px 1px rgba(black, 0.1);
+  resize: none;
+}
+.dataForm input:focus, textarea:focus {
+  box-shadow : 0 0px 2px rgba(var(--main-color), 1)!important;
+}
+#share-post-btn {
+  color: white; 
+  background: var(--main-color);
+  cursor: pointer;
+}
+#share-post-btn:hover {
+  box-shadow : 0 1px 1px 1px rgba(#aaa, 0.6); 
+}
+textarea {
+   height: 126px;
+}
+
+.half {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+/* End Form Section */
