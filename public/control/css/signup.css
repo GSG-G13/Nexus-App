@@ -8,6 +8,7 @@
   
   body{
     background-color: #fafafa;
+    
   }
 
   .logo{
@@ -106,6 +107,18 @@
       color: #00a0f7;
   }
   
+.error_meesage {
+  color: rgb(223, 0, 0) !important;
+  margin-top: 0;
+  margin-bottom: 16px !important;
+  display: block !important;
+  text-align: left !important;
+}
+
+.error_meesage_hidden {
+display: none !important;
+}
+
   @media only screen and (max-width: 400px) {
 
     .page{
