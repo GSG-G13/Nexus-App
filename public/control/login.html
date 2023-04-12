@@ -5,25 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="/control/css/login.css" />
   </head>
   <body>
     <div class="container">
       <div class="right">
         <h1>Log in to Nexuus</h1>
-        <form>
+        <div id="form">
           <input
             type="text"
+            name="email"
             class="input-field"
+            id="email"
             placeholder="Username or email"
           />
-          <input type="password" class="input-field" placeholder="Password" />
-          <button type="submit" class="btn">Log In</button>
-        </form>
+          <p class="error_meesage error_meesage_hidden" id="email_error"></p>
+          <input type="password" name="password" class="input-field" id="password" placeholder="Password" />
+          <p class="error_meesage error_meesage_hidden" id="password_error"></p>
+          <button class="btn" id="log-btn">Log In</button>
+        </div>
         <div class="signup-link">
-          Don't have an account? <a href="./signup.html">Sign up</a>
+          Don't have an account? <a href="/signup">Sign up</a>
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/joi@17.6.0/dist/joi-browser.min.js"></script>
+    <script src="../js/valid.js"></script>
   </body>
 </html>
