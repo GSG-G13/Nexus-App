@@ -9,7 +9,7 @@ const validateSignup = (userData) => {
   email: Joi.string()
     .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net', 'org'] } })
     .required(),
-  password: Joi.string().min(8).max(30).pattern(new RegExp('^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{3,}$')).required(),
+  password: Joi.string().min(8).max(30).required(),
   confirmPassword: Joi.ref('password'),
 })
 
@@ -47,7 +47,7 @@ const addUserController = (req, res) => {
 
     // validation pass
 
-    hashPassword(password, (err, hashed) => {
+      hashPassword(password, (err, hashed) => {
         if(err) {
             res.status(400).json({
                 message: 'something went wrong',
@@ -65,7 +65,6 @@ const addUserController = (req, res) => {
   res.status(200).json({
     message: 'signup sccusseful',
   });
-
 }
 
 module.exports = addUserController;

@@ -108,7 +108,7 @@
   }
   
 .error_meesage {
-  color: red !important;
+  color: rgb(223, 0, 0) !important;
   margin-top: 0;
   margin-bottom: 16px !important;
   display: block !important;

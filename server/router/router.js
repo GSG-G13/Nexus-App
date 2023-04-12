@@ -9,11 +9,6 @@ router.get('/signup', (req, res)=>{
 
 router.post('/signup', addUserController)
  
-router.post('/add-user', (req, res)=>{
-  addUser(req.body)
-  res.redirect('/signup');
-})
-
 router.get('/posts', getPostsController)
 
 router.post('/posts', addPostController)
