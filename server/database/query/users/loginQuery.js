@@ -5,10 +5,10 @@ const loginQuery = (userData) => {
 
   const sql = {
     text: 'SELECT id,username, email,password FROM users where email=$1 ;',
-    values: [email]
-  }
+    values: [email],
+  };
 
-  return connection.query(sql)
+  return connection.query(sql);
 };
 
 module.exports = loginQuery;

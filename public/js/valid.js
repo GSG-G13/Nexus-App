@@ -11,6 +11,7 @@ class ValidationError extends Error {
     this.fieldName = fieldName;
   }
 }
+
 const loginSchema = joi.object({
   email: joi
     .string()

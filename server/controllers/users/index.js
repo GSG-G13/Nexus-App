@@ -1,3 +1,3 @@
-const addUserController = require('./addusers')
+const addUserController = require('./users')
 
 module.exports = { addUserController };
