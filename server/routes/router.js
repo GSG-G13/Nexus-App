@@ -1,10 +1,10 @@
 const path = require('path');
 const router = require('express').Router();
-const { clientError, serverError } = require('../controllers/errors');
+const { clientError, serverError } = require('../errors');
 
 const{ getPostsController, addPostController, addUserController} = require('../controllers')
 
-const loginController = require('../controllers/users/loginUser')
+const loginController = require('../controllers/users/auth')
 
 router.get('/signup', (req, res)=>{
  res.status(200).sendFile(path.join(__dirname,'..','..', 'public','control','signup.html' ));
