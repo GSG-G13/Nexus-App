@@ -9,8 +9,7 @@ const loginController = require('../controllers/users/loginUser')
 router.get('/signup', (req, res)=>{
  res.status(200).sendFile(path.join(__dirname,'..','..', 'public','control','signup.html' ));
 })
-router.use(clientError);
-router.use(serverError);
+
 
 
 router.get('/login', (req, res)=>{
@@ -24,5 +23,8 @@ router.post('/login' , loginController)
 router.get('/posts', getPostsController)
 
 router.post('/posts', addPostController)
+
+router.use(clientError);
+router.use(serverError);
 
 module.exports = router;

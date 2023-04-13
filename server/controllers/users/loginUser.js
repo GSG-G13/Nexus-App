@@ -25,8 +25,9 @@ const loginController = (req, res) => {
         res.json({message: 'Please Signup Before Login'})
       }
       bcrypt
-        .compare(req.body.password, data.rows[0].password)
-        .then((result) => {
+      .compare(req.body.password, data.rows[0].password)
+      .then((result) => {
+
           if(result === true) {
             const access_token = jwt.sign(
               {
